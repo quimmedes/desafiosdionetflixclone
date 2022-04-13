@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl.theme.default.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+    <title>Netflix the Clone</title>
+  </head>
+  <body>
+
+
+
+    <header>
+    <h2>Netflix The Clone</h2>
+
+    <nav>
+   <a href="#">Inicio</a>
+   <a href="#">Séries</a> 
+   <a href="#">Filmes</a>
+   <a href="#">Mais recentes</a>
+   <a href="#">Minha lista</a>
+        
+    </nav>
+    </header>
+
+<main>
+  <div id="filme" class="filme-principal">
+
+    <div class="container">
+      <h3 class="titulo">Homem-Aranha: Sem Volta para Casa</h3>
+      <p class="descricao">
+        Com a identidade do Homem-Aranha revelada, Peter pede ajuda ao Doutor Strange. Quando um feitiço corre mal, inimigos perigosos de outros mundos começam a aparecer, forçando Peter a descobrir o que realmente significa ser o Homem-Aranha.
+      </p>
+      <button type="button">Mais Informações</button>
+    </div>
+  </div>
+
+
+  <div class="container2">
+    <p>Populares na Netflix</p>
+
+    <div id="carousel1" class="owl-carousel owl-theme">
+
+      <div class="item"><a href="#" onclick="myfunction(0)"><img id="img1" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo1">Testes</p> </a> </div>
+
+      <div class="item"><a href="#"  onclick="myfunction(1)"><img id="img2" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo2">Testes</p> </a> </div>
+
+      <div class="item"><a href="#"  onclick="myfunction(2)"><img id="img3" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo3">Testes</p> </a> </div>
+      <div class="item"><a href="#"  onclick="myfunction(3)"><img id="img4" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo4">Testes</p> </a> </div>
+
+      <div class="item"><a href="#"  onclick="myfunction(4)"><img id="img5" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo5">Testes</p> </a> </div>
+      <div class="item"><a href="#"  onclick="myfunction(5)"><img id="img6" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo6">Testes</p> </a> </div>
+
+      <div class="item"><a href="#"  onclick="myfunction(6)"><img id="img7" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo7">Testes</p> </a> </div>
+      <div class="item"><a href="#"  onclick="myfunction(7)"><img id="img8" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo8">Testes</p> </a> </div>
+
+      <div class="item"><a href="#"  onclick="myfunction(8)"><img id="img9" src="https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg" /><p id="titulo9">Testes</p> </a> </div>
+
+
+
+
+
+    
+
+      <script>
+            
+
+        axios.get('https://api.themoviedb.org/3/trending/all/day?api_key=064c7862159c5175ad5854f2c81f2b57&language=pt-BR')
+        .then(response => {
+             lista = response.data.results;
+           
+             document.getElementById("img1").src= 'https://image.tmdb.org/t/p/w342'+lista[0].poster_path;
+             document.getElementById("titulo1").innerText=lista[0].title;
+             document.getElementById("img2").src= 'https://image.tmdb.org/t/p/w342'+lista[1].poster_path;
+             document.getElementById("titulo2").innerText=lista[1].title;
+             document.getElementById("img3").src= 'https://image.tmdb.org/t/p/w342'+lista[2].poster_path;
+             document.getElementById("titulo3").innerText=lista[2].title;
+             document.getElementById("img4").src= 'https://image.tmdb.org/t/p/w342'+lista[3].poster_path;
+             document.getElementById("titulo4").innerText=lista[3].title;
+             document.getElementById("img5").src= 'https://image.tmdb.org/t/p/w342'+lista[4].poster_path;
+             document.getElementById("titulo5").innerText=lista[4].title;
+             document.getElementById("img6").src= 'https://image.tmdb.org/t/p/w342'+lista[5].poster_path;
+             document.getElementById("titulo6").innerText=lista[5].title;
+             document.getElementById("img7").src= 'https://image.tmdb.org/t/p/w342'+lista[6].poster_path;
+             document.getElementById("titulo7").innerText=lista[6].title;
+             document.getElementById("img8").src= 'https://image.tmdb.org/t/p/w342'+lista[7].poster_path;
+             document.getElementById("titulo8").innerText=lista[7].title;
+             document.getElementById("img9").src= 'https://image.tmdb.org/t/p/w342'+lista[8].poster_path;
+             document.getElementById("titulo9").innerText=lista[8].title;
+                    
+
+
+        })
+        .catch(error => console.error(error));
+
+        function myfunction( e){
+
+          document.getElementById("filme").style.background = 'url(https://image.tmdb.org/t/p/w1280' + lista[e].backdrop_path+ '),linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), no-repeat';
+          document.getElementById("filme").style.backgroundSize = "100% 100%";
+
+        }
+
+        
+
+
+
+      </script>
+
+         
+      
+     
+  </div>  </div>
+
+
+
+
+</main>
+
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+
+
+</html>

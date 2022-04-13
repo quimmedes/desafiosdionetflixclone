@@ -1,0 +1,152 @@
+* {
+
+background-color: black;
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+color: silver;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+}
+
+h2 {
+    color:red;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    margin-left: 10px;
+        
+}
+
+nav {
+    padding-right: 5%;
+}
+
+
+ nav a {
+ 
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+a {
+    color:silver;
+    text-decoration: none;
+}
+
+  a:hover{
+    color:white;
+}
+
+a p{
+  color:silver;
+}
+
+a p:hover{
+    color: white;
+}
+
+.item:hover{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: .3s ease all;
+
+}
+
+
+main .filme-principal{
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%) , url('/img/spider-man.webp') no-repeat;
+    
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    
+
+}
+
+.container .descricao{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.container button{
+    
+    border:none;
+    color: white;
+
+
+    padding:15px 30px;
+    margin: 20px;
+    font-size: 1.2em;
+
+    cursor: pointer;
+    transition: .3s ease all;
+
+}
+
+.container button:hover{
+
+    background-color:white;
+    color:black;
+}
+
+
+
+main .container {
+    width: 40%;
+    background-color: transparent;
+    color: silver;
+}
+
+.filme-principal{
+
+    margin-bottom: 10px;
+
+}
+
+.container2{
+ 
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+main p{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: transparent;
+    font-size: 16pt;
+}
+
+.item p{
+    overflow: hidden;
+
+
+}
+
+main h3{
+    background-color: transparent;
+    font-size: 24pt;
+    font-weight: 700;
+
+}
+main button{
+    background-color: transparent;
+
+}
+
+
+
+
+
